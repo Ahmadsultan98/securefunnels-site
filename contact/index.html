@@ -385,8 +385,8 @@ src="https://www.facebook.com/tr?id=2196007570863775&ev=PageView&noscript=1"
             <label for="service">Service Needed</label>
             <select id="service" name="service" required>
               <option value="" disabled selected>Select a service</option>
-              <option value="DMCA Takedown - Free Audit">DMCA Takedown · Free Audit</option>
-              <option value="B2B Lead Generation">B2B Lead Generation</option>
+              <option value="Brand Protection - Free Piracy Audit">Brand Protection · Free Piracy Audit</option>
+              <option value="Lead Generation - Free 50 Leads">Lead Generation and Email Outreach · Free 50-Lead Sample</option>
               <option value="Video Editing">Video Editing</option>
               <option value="Multiple Services">Multiple Services</option>
               <option value="Not sure">Not Sure · Let Ahmad Advise</option>
@@ -621,7 +621,7 @@ if(window.location.hash==='#form')setTimeout(()=>document.getElementById('form')
     var key=window.SF_FORM_KEY||'';
     if(!key||key.indexOf('PASTE')===0){ err('The form is not connected yet. Please email us at <a href="mailto:'+EMAIL+'" style="font-weight:700;text-decoration:underline">'+EMAIL+'</a>.'); return; }
     btn.disabled=true; var old=btn.textContent; btn.textContent='Sending...';
-    var data={access_key:key,subject:'New Free Audit Request: '+svc+' ('+name+')',from_name:'Secure Funnels Website',
+    var data={access_key:key,subject:'New website enquiry: '+svc+' ('+name+')',from_name:'Secure Funnels Website',
       name:name,email:email,service:svc,website:f.website.value.trim(),message:msg,
       page:location.href,botcheck:f.botcheck.checked};
     try{ var p=new URLSearchParams(location.search); ['utm_source','utm_medium','utm_campaign','utm_content','fbclid'].forEach(function(k){ if(p.get(k)) data[k]=p.get(k); }); var ls=sessionStorage.getItem('sf_utm'); if(ls){ Object.assign(data, JSON.parse(ls)); } }catch(x){}
